@@ -1,6 +1,6 @@
 require 'pathname'
 
-require File.join(File.expand_path(File.dirname(__FILE__)), '/classes/IlluminatorFramework.rb')
+require File.join(File.expand_path(File.dirname(__FILE__)), '../src/scripts/classes/classes/IlluminatorFramework.rb')
 
 workspace = Dir.pwd
 

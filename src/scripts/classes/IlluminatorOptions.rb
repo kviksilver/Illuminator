@@ -52,6 +52,7 @@ class IlluminatorOptions < RecursiveOpenStruct
     self.xcode.appName = nil
     self.xcode.sdk = nil
     self.xcode.scheme = nil
+    self.xcode.workspace = nil
     self.xcode.environmentVars = nil
 
     self.illuminator.entryPoint = nil

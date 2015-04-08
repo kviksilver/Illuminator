@@ -61,6 +61,7 @@ class IlluminatorParser < OptionParser
     illuminatorOptions.xcode.appName = @_options["appName"] unless @_options["appName"].nil?
     illuminatorOptions.xcode.sdk     = @_options["sdk"] unless @_options["sdk"].nil?
     illuminatorOptions.xcode.scheme  = @_options["scheme"] unless @_options["scheme"].nil?
+    illuminatorOptions.xcode.workspaceFile  = @_options["workspaceFile"] unless @_options["workspaceFile"].nil?
 
     illuminatorOptions.illuminator.entryPoint      = @_options["entryPoint"] unless @_options["entryPoint"].nil?
     illuminatorOptions.illuminator.test.randomSeed = @_options["randomSeed"].to_i unless @_options["randomSeed"].nil?
@@ -124,6 +125,7 @@ class IlluminatorParserFactory
       'p' => 'testPath',
       'a' => 'appName',
       'P' => 'xcodeProject',
+      'W' => 'xcodeWorkspace',
       't' => 'tagsAny',
       'o' => 'tagsAll',
       'n' => 'tagsNone',
@@ -182,6 +184,7 @@ class IlluminatorParserFactory
     self.addSwitch('p', ['-p', '--testPath PATH', 'Path to js file with all tests imported'])
     self.addSwitch('a', ['-a', '--appName APPNAME', "Name of the app to build / run"])
     self.addSwitch('P', ['-P', '--xcodeProject PROJECTNAME', "Project to build -- required if there are 2 in the same directory"])
+	self.addSwitch('W', ['-W', '--xcodeWorkspace WORKSPACENAME', "Workspace to build"])
     self.addSwitch('t', ['-t', '--tags-any TAGSANY', 'Run tests with any of the given tags'])
     self.addSwitch('o', ['-o', '--tags-all TAGSALL', 'Run tests with all of the given tags'])
     self.addSwitch('n', ['-n', '--tags-none TAGSNONE', 'Run tests with none of the given tags'])

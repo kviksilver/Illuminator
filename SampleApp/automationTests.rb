@@ -18,6 +18,7 @@ optionStruct = parser.parse ARGV
 # hard code the project-specific information we have
 optionStruct.xcode.appName = 'AutomatorSampleApp'
 optionStruct.xcode.scheme = 'AutomatorSampleApp'
+optionStruct.xcode.workspaceFile = 'AutomatorSampleApp.xcworkspace'
 optionStruct.javascript.implementation = 'iPhone'
 optionStruct.javascript.testPath = HostUtils.realpath('../SampleTests/tests/AllTests.js') # must be full path
 
